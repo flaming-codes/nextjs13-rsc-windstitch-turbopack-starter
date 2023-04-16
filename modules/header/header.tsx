@@ -12,13 +12,13 @@ const Base = w.header(`
 const Nav = w.nav(`
   flex flex-col gap-4
   
-  md:flex-row
+  md:flex-row-reverse
 `);
 
 const LinkItem = w(Link, {
   className: `
-    transition-colors duration-200 ease-in-out
-    hover:text-blackA-8
+    transition-opacity duration-200 ease-in-out
+    hover:opacity-50
   `,
 });
 
@@ -30,7 +30,7 @@ export function Header() {
       </TitleLabel>
       <Nav>
         <LinkItem href="/">Home</LinkItem>
-        <LinkItem href="/about">About</LinkItem>
+        <LinkItem href="/interactive-rsc">Interactive RSC</LinkItem>
       </Nav>
     </Base>
   );

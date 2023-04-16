@@ -29,6 +29,40 @@ export default function Home() {
         </TitleLabel>
       </Section>
       <Section>
+        <TitleLabel title="Next.js 13 with /app">
+          <Link
+            href="https://beta.nextjs.org/docs/getting-started"
+            target="_blank"
+          >
+            Next.js 13 introduces a new <code>/app</code> directory that is
+            intended to contain all routes as well as meta data, layout
+            definitions, and other colocated files. This is a great way to
+            organize your application and is a big improvement over the previous
+            approach.
+          </Link>
+        </TitleLabel>
+      </Section>
+      <Section>
+        <TitleLabel
+          title={
+            <>
+              Revalidation of
+              <br />
+              React Components
+            </>
+          }
+        >
+          <Link
+            href="https://nextjs.org/blog/next-13#data-fetching"
+            target="_blank"
+          >
+            With Next.js 13, you can now revalidate React (Server) components by
+            simply adding a<code>revalidate</code> property as 2nd argument to
+            the <code>fetch</code> function inside the RSC.
+          </Link>
+        </TitleLabel>
+      </Section>
+      <Section>
         <TitleLabel
           title={
             <>
@@ -76,20 +110,7 @@ export default function Home() {
           </Link>
         </TitleLabel>
       </Section>
-      <Section>
-        <TitleLabel title="Next.js 13 with /app">
-          <Link
-            href="https://beta.nextjs.org/docs/getting-started"
-            target="_blank"
-          >
-            Next.js 13 introduces a new <code>/app</code> directory that is
-            intended to contain all routes as well as meta data, layout
-            definitions, and other colocated files. This is a great way to
-            organize your application and is a big improvement over the previous
-            approach.
-          </Link>
-        </TitleLabel>
-      </Section>
+
       <Section>
         <TitleLabel title="Storybook 7">
           <Link href="https://storybook.js.org/releases/7.0d" target="_blank">
