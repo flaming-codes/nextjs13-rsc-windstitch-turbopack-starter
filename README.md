@@ -1,4 +1,4 @@
-# nextjs13-rsc-windstitch-turbopack-starter
+# Next.js 13 / RSC / Windstitch / Turbopack Starter
 
 Template to get you started with Next.js 13, RSC (React Server Components), Windstitch (Tailwind CSS in React), and Turbopack. This template will be updated as new features for Next.js 13 are released.
 
