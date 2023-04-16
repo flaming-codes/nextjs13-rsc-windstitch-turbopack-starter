@@ -12,7 +12,7 @@ function pxRem(px: number): string {
 
 export default {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,css}",
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./modules/**/*.{js,ts,jsx,tsx}",

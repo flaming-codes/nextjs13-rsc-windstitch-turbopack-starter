@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev\" \"tailwindcss --input ./app/globals.input.css --output ./app/globals.css --watch\"",
-    "build": "tailwindcss ./app/globals.input.css --output ./app/globals.css && next build",
+    "dev": "next dev --turbo",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,ts,tsx,md}\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

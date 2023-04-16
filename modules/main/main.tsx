@@ -4,7 +4,7 @@ import { W, w } from "windstitch";
 
 const Base = w.main(`
   flex flex-col items-center justify-center overflow-y-auto
-  rounded-xl bg-sand-11 text-blackA-12
+  rounded-xl bg-sand-12 text-blackA-12
 `);
 
 type Props = PropsWithChildren<{}>;

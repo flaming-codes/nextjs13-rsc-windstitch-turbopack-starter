@@ -8,7 +8,7 @@
       "commands": [
         "nvm use",
         "npm i",
-        "npm run dev --turbo"
+        "npm run dev"
       ]
     }
   ]

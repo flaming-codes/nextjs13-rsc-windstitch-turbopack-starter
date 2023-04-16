@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/css/globals.css";
 import localFont from "next/font/local";
 import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
