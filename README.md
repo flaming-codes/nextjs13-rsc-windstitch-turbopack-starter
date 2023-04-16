@@ -1,0 +1,1 @@
+# nextjs-rsc-appdir-tailwind-windstitch-starter
