@@ -1,0 +1,15 @@
+{
+  "autorun": true,
+  "autokill": true,
+  "terminals": [
+    {
+      "name": "next",
+      "open": true,
+      "commands": [
+        "nvm use",
+        "npm i",
+        "npm run dev"
+      ]
+    }
+  ]
+}

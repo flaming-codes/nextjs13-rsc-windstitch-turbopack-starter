@@ -1,0 +1,22 @@
+{
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "tailwindCSS.experimental.classRegex": [
+    "twc\\`(.*)\\`;?",
+    ["(?:twMerge|twJoin)\\(([^\\);]*)[\\);]", "[`'\"]([^'\"`,;]*)[`'\"]"],
+    "(w(?:\\.[a-z]+)?\\((?:[\\s\\S]*?)(?:[`'\"][\\s\\S]*[`'\"])*?\\))|(w(?:\\.[a-z]+)?\\((?:[\\s\\S]*?)(?:[`'\"][\\s\\S]*[`'\"])*?\\))"
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "tw.*",
+    "twc.*"
+  ],
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "cSpell.words": ["clsx", "Windstitch"],
+  "git-blame.gitWebUrl": ""
+}
