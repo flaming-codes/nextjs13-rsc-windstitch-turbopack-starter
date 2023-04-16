@@ -12,6 +12,6 @@
   }
 
   body {
-    @apply bg-slate-1 text-indigo-12
+    @apply bg-gray-1 text-gray-12
   }
 }

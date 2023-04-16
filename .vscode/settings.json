@@ -9,8 +9,14 @@
     ["(?:twMerge|twJoin)\\(([^\\);]*)[\\);]", "[`'\"]([^'\"`,;]*)[`'\"]"],
     "(w(?:\\.[a-z]+)?\\((?:[\\s\\S]*?)(?:[`'\"][\\s\\S]*[`'\"])*?\\))|(w(?:\\.[a-z]+)?\\((?:[\\s\\S]*?)(?:[`'\"][\\s\\S]*[`'\"])*?\\))"
   ],
-  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "tw.*", "twc.*"],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "tw.*",
+    "twc.*"
+  ],
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["clsx"],
+  "cSpell.words": ["clsx", "Windstitch"],
   "git-blame.gitWebUrl": ""
 }

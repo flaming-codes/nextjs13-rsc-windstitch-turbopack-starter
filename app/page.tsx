@@ -1,62 +1,118 @@
-import clsx from "clsx";
-import { W, w } from "windstitch";
-import NextLink from "next/link";
-import { twc, twMerge } from "@/utils/tailwind";
-import { Block } from "@/components/Block.client";
-import { LinkGrid, LinkGridItem } from "@/components/LInkGrid";
+import { w } from "windstitch";
+import Link from "next/link";
+import { TitleLabel } from "@/modules/ui/title-label";
 
-const exampleClasses = {
-  md: "md:text-4xl md:mt-8",
-  lg: "in top-0",
-};
+const Base = w.div(`
+  grid grid-cols-1 gap-8 p-6 text-14
+  md:grid-cols-2 md:gap-16
+  xl:grid-cols-3 xl:gap-20
+  2xl:grid-cols-4 2xl:gap-32
+`);
 
-const singleClasses = "font-sans inset-0";
-const what = twc`font-sans`;
-const merge = twMerge("font-sans", "text-20");
-
-const twExample = {
-  md: "font-sans inset-0",
-};
-
-const Button = w.button("block  text-24 underline underline-offset-2", {
-  defaultVariants: {
-    variant: "primary",
-  },
-  variants: {
-    variant: {
-      primary: "",
-      secondary: "",
-    },
-  },
-});
-type ButtonProps = W.Infer<typeof Button>;
-
-const Link = w.a("", {
-  defaultVariants: {
-    bg: "blue",
-  },
-  variants: {
-    bg: {
-      blue: " bg-[#0070f3]",
-      green: " bg-[#67e480]",
-    },
-  },
-});
+const Section = w.section(``);
 
 export default function Home() {
   return (
-    <main className="p-8 bg-polar-night-200">
-      <section className="mt-4 text-center">
-        <h1 className="text-160-fluid">Hello World</h1>
-        <p className="text-48-fluid">
-          This is a Next.js app with Tailwind CSS.
-        </p>
-      </section>
-
-      <LinkGrid className="max-w-6xl mx-auto mt-8">
-        <LinkGridItem href="/" title="Home" />
-        <LinkGridItem href="/about" title="About" />
-      </LinkGrid>
-    </main>
+    <Base>
+      <Section className="col-span-full">
+        <TitleLabel title="Features">of this template</TitleLabel>
+      </Section>
+      <Section>
+        <TitleLabel title="tl;dr">
+          <Link href="/">
+            This is a template to get you started with Next.js 13, RSC (React
+            Server Components), Windstitch (Tailwind CSS in React), Storybook 7
+            and Turbopack. It uses colaction to organize your code (see{" "}
+            <code>/modules</code>) and uses as much new features from Next.js 13
+            as possible.
+          </Link>
+        </TitleLabel>
+      </Section>
+      <Section>
+        <TitleLabel
+          title={
+            <>
+              Windstitch
+              <br />
+              for Tailwind
+            </>
+          }
+        >
+          <Link href="https://windstitch.vercel.app/" target="_blank">
+            Windstitch is a library that allows you to use Tailwind classes in
+            your React components. It replaces the need for a CSS-in-JS library
+            like Emotion or Styled Components and{" "}
+            <strong>is compatible with RSC</strong>. Windstitch has a
+            styled-like API and supports polymorphic components.
+          </Link>
+        </TitleLabel>
+      </Section>
+      <Section>
+        <TitleLabel
+          title={
+            <>
+              Windstitch
+              <br />& VS Code
+            </>
+          }
+        >
+          To improve the DX of Windstitch, this template also includes a custom
+          VS Code <code>settings.json</code> file. This extension allows you to
+          use Tailwind classes in your CSS-in-JS files and provides
+          autocompletion for them. It is not perfect yet, but it is still a
+          great improvement over the default experience.
+        </TitleLabel>
+      </Section>
+      <Section>
+        <TitleLabel title="Turbopack">
+          <Link
+            href="https://turbo.build/pack/docs/features/css"
+            target="_blank"
+          >
+            Turbopack is a build tool developed by Vercel that is written in
+            Rust. It replaces the need for a bundler like Webpack or Parcel and{" "}
+            <strong>is extremely fast</strong>. You should therefore notice a
+            significant improvement in your build times.
+          </Link>
+        </TitleLabel>
+      </Section>
+      <Section>
+        <TitleLabel title="Next.js 13 with /app">
+          <Link
+            href="https://beta.nextjs.org/docs/getting-started"
+            target="_blank"
+          >
+            Next.js 13 introduces a new <code>/app</code> directory that is
+            intended to contain all routes as well as meta data, layout
+            definitions, and other colocated files. This is a great way to
+            organize your application and is a big improvement over the previous
+            approach.
+          </Link>
+        </TitleLabel>
+      </Section>
+      <Section>
+        <TitleLabel title="Storybook 7">
+          <Link href="https://storybook.js.org/releases/7.0d" target="_blank">
+            Version 7 of Storybook is a major release that introduces a new UI,
+            a new component explorer, and a new way to write stories. It also
+            introduces a new way to write stories using the new
+            <code>CSF</code> format. It also offers a first-party integration
+            with Next.js.
+          </Link>
+        </TitleLabel>
+      </Section>
+      <Section>
+        <TitleLabel title="TypeScript 5">
+          <Link
+            href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/"
+            target="_blank"
+          >
+            This template also uses TypeScript 5. TypeScript 5 introduces
+            performance improvements, new features (like the{" "}
+            <code>satisfies</code>-operator), and bug fixes.
+          </Link>
+        </TitleLabel>
+      </Section>
+    </Base>
   );
 }

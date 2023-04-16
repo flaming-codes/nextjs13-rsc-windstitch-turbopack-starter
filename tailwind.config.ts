@@ -84,6 +84,10 @@ export default {
       screens: {
         xs: "480px",
       },
+      maxWidth: {
+        "8xl": "1400px",
+        "9xl": "1600px",
+      },
     },
   },
 } satisfies Config;

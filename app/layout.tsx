@@ -4,6 +4,7 @@ import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Header } from "@/modules/header/header";
 import { Main } from "@/modules/main/main";
+import { Hero } from "@/modules/header/hero";
 
 const inter = localFont({
   variable: "--font-inter",
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <head />
       <body>
         <Header />
+        <Hero />
         <Main>{children}</Main>
       </body>
     </html>
