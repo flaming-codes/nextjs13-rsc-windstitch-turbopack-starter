@@ -50,7 +50,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className="pb-48">
         <Header />
         <Hero />
         <Main>{children}</Main>

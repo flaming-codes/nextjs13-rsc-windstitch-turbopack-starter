@@ -4,6 +4,10 @@ import { w } from "windstitch";
 
 type Props = PropsWithChildren<{}>;
 
+export const metadata = {
+  title: "Interactive RSC",
+};
+
 const Base = w.div(`
   grid grid-cols-1 gap-8 p-6 text-14
   lg:grid-cols-2 lg:gap-16
