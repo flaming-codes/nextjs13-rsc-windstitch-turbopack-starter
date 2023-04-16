@@ -8,7 +8,6 @@ This repo is an ongoing WIP to explore new ideas and ways for implementing inter
 - Tailwind
 - Turbopack (for both Next.js and Tailwind)
 - windstitch (styled alternative)
-- Storybook 7 (Beta)
 
 ### Next.js 13
 
@@ -40,10 +39,6 @@ const nextConfig = {
   ...
 };
 ```
-
-### Prototyping
-
-As an opportunity to explore Storybook 7, I've added a Storybook config to the project. It's currently in Beta, but it's a lot faster than the previous version. It has official support for Next.js via a preset, which makes the setup a lot easier.
 
 ## Useful Links
 

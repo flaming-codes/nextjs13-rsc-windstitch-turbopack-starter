@@ -21,8 +21,8 @@ export default function Home() {
         <TitleLabel title="tl;dr">
           <Link href="/">
             This is a template to get you started with Next.js 13, RSC (React
-            Server Components), Windstitch (Tailwind CSS in React), Storybook 7
-            and Turbopack. It uses colaction to organize your code (see{" "}
+            Server Components), Windstitch (Tailwind CSS in React), and
+            Turbopack. It uses colaction to organize your code (see{" "}
             <code>/modules</code>) and uses as much new features from Next.js 13
             as possible.
           </Link>
@@ -115,18 +115,6 @@ export default function Home() {
             Rust. It replaces the need for a bundler like Webpack or Parcel and{" "}
             <strong>is extremely fast</strong>. You should therefore notice a
             significant improvement in your build times.
-          </Link>
-        </TitleLabel>
-      </Section>
-
-      <Section>
-        <TitleLabel title="Storybook 7">
-          <Link href="https://storybook.js.org/releases/7.0d" target="_blank">
-            Version 7 of Storybook is a major release that introduces a new UI,
-            a new component explorer, and a new way to write stories. It also
-            introduces a new way to write stories using the new
-            <code>CSF</code> format. It also offers a first-party integration
-            with Next.js.
           </Link>
         </TitleLabel>
       </Section>
