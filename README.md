@@ -1,45 +1,45 @@
-# Interactive 3D Portfolio
+# nextjs13-rsc-windstitch-turbopack-starter
 
-This repo is an ongoing WIP to explore new ideas and ways for implementing interactive 3D web models (Three.js, WebGL, etc).
+Template to get you started with Next.js 13, RSC (React Server Components), Windstitch (Tailwind CSS in React), and Turbopack. This template will be updated as new features for Next.js 13 are released.
 
-## Stack
+## Features of this template
 
-- Next.js 13 w/ `/app` folder structure
-- Tailwind
-- Turbopack (for both Next.js and Tailwind)
-- windstitch (styled alternative)
+- 🚀 Next.js 13 with /app directory for improved organization
+- 🔄 Revalidation of React components in RSC with revalidate property
+- 🎨 Windstitch for Tailwind CSS in React with styled-like API and polymorphic components
+- 💻 Custom VS Code settings for improved DX with Windstitch
+- ⚡️ Turbopack for extremely fast builds
+- 🔢 TypeScript 5 for performance improvements and new features
+- 🎉 Playful animation powered by Pts.js library (optional)
 
-### Next.js 13
+### tl;dr
 
-Next.js is used **with `/app` folder structure**. This is a new feature in Next.js 13 that allows for a more modular approach to the project. It should be easier to manage and maintain due to colocation of relevant components as well as `layout.tsx` and `head.tsx` single-purpose components.
+This is a template to get you started with Next.js 13, RSC (React Server Components), Windstitch (Tailwind CSS in React), and Turbopack. It uses colaction to organize your code (see /modules) and uses as much new features from Next.js 13 as possible.
 
-### Styling
+### Next.js 13 with /app
 
-This project uses vanilla **Tailwind** for implementing the design system.
+Next.js 13 introduces a new /app directory that is intended to contain all routes as well as meta data, layout definitions, and other colocated files. This is a great way to organize your application and is a big improvement over the previous approach.
 
-**Styled Components** are currently not fully compatible with Next.js 13 w/RSC, as they require a context to mount. RSC doesn't support context as well as `useState`, therefore `windstitch` is used as a styled alternative. It offers a styled-like API.
+### Revalidation of React Components
 
-### Compiling
+With Next.js 13, you can now revalidate React (Server) components by simply adding a revalidate property as 2nd argument to the fetch function inside the RSC. Learn more.
 
-**Turbopack** is used to compile both Next.js and Tailwind. It's a fork of `esbuild` that adds support for `postcss` and `tailwindcss`. It's a lot faster than `next build` and `next export`.
+#### Windstitch for Tailwind
 
-The relevant changes are for one in the `package.json` file.
+Windstitch is a library that allows you to use Tailwind classes in your React components. It replaces the need for a CSS-in-JS library like Emotion or Styled Components and is compatible with RSC. Windstitch has a styled-like API and supports polymorphic components.
 
-```json
-"dev": "concurrently \"next dev\" \"tailwindcss --input ./app/globals.input.css --output ./app/globals.css --watch\"",
-"build": "tailwindcss ./app/globals.input.css --output ./app/globals.css && next build",
-```
+### Windstitch & VS Code
 
-The other change is in the `next.config.js` file.
+To improve the DX of Windstitch, this template also includes a custom VS Code settings.json file. This extension allows you to use Tailwind classes in your CSS-in-JS files and provides autocompletion for them. It is not perfect yet, but it is still a great improvement over the default experience.
 
-```js
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  ...
-};
-```
+### Turbopack
 
-## Useful Links
+Turbopack is a build tool developed by Vercel that is written in Rust. It replaces the need for a bundler like Webpack or Parcel and is extremely fast. You should therefore notice a significant improvement in your build times.
 
-- [Vercel app playground](https://github.com/vercel/app-playground/tree/main)
+### TypeScript 5
+
+This template also uses TypeScript 5. TypeScript 5 introduces performance improvements, new features (like the satisfies-operator), and bug fixes.
+
+### Demo by Pts.js
+
+Pts.js is a library for creative coding in JavaScript and powers the playful animation in the hero section of this page. Feel free to remove it if you do not need it. But I highly recommend you to check it out.
