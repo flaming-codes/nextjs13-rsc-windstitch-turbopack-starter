@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --header-h: 54px;
+}
+
 @layer base {
   html {
     @apply font-sans;

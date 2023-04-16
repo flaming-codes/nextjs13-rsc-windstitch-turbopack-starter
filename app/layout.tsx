@@ -1,6 +1,9 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import { PropsWithChildren } from "react";
+import type { Metadata } from "next";
+import { Header } from "@/modules/header/header";
+import { Main } from "@/modules/main/main";
 
 const inter = localFont({
   variable: "--font-inter",
@@ -32,6 +35,11 @@ const inter = localFont({
   ],
 });
 
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to Next.js",
+};
+
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={inter.variable}>
@@ -40,7 +48,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <Header />
+        <Main>{children}</Main>
+      </body>
     </html>
   );
 }

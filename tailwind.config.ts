@@ -12,9 +12,10 @@ function pxRem(px: number): string {
 
 export default {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,css}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./modules/**/*.{js,ts,jsx,tsx}",
   ],
   plugins: [windyRadixPalette, windyRadixTypography, tailwindTypography],
   darkMode: "media",
@@ -44,6 +45,26 @@ export default {
         `min(1vw, ${pxRem(16)})`,
         { lineHeight: "1.4", letterSpacing: "0.02em" },
       ],
+      "14-fluid": [
+        `min(0.875vw, ${pxRem(14)})`,
+        { lineHeight: "1.4", letterSpacing: "0.02em" },
+      ],
+      "12-fluid": [
+        `min(0.75vw, ${pxRem(12)})`,
+        { lineHeight: "1.4", letterSpacing: "0.02em" },
+      ],
+      "10-fluid": [
+        `min(0.625vw, ${pxRem(10)})`,
+        { lineHeight: "1.4", letterSpacing: "0.08em" },
+      ],
+      "8-fluid": [
+        `min(0.5vw, ${pxRem(8)})`,
+        { lineHeight: "1.4", letterSpacing: "0.08em" },
+      ],
+      "6-fluid": [
+        `min(0.375vw, ${pxRem(6)})`,
+        { lineHeight: "1.4", letterSpacing: "0.08em" },
+      ],
       80: [pxRem(80), { lineHeight: "1.1" }],
       72: [pxRem(72), { lineHeight: "1" }],
       48: [pxRem(48), { lineHeight: "1" }],
@@ -56,6 +77,8 @@ export default {
       14: [pxRem(14), { lineHeight: "1.4", letterSpacing: "0.02em" }],
       12: [pxRem(12), { lineHeight: "1.4", letterSpacing: "0.02em" }],
       10: [pxRem(10), { lineHeight: "1.4", letterSpacing: "0.08em" }],
+      8: [pxRem(8), { lineHeight: "1.4", letterSpacing: "0.08em" }],
+      6: [pxRem(6), { lineHeight: "1.4", letterSpacing: "0.08em" }],
     },
     extend: {
       screens: {
