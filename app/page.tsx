@@ -29,7 +29,15 @@ export default function Home() {
         </TitleLabel>
       </Section>
       <Section>
-        <TitleLabel title="Next.js 13 with /app">
+        <TitleLabel
+          title={
+            <>
+              Next.js 13
+              <br />
+              with <code>/app</code>
+            </>
+          }
+        >
           <Link
             href="https://beta.nextjs.org/docs/getting-started"
             target="_blank"
@@ -131,6 +139,24 @@ export default function Home() {
             This template also uses TypeScript 5. TypeScript 5 introduces
             performance improvements, new features (like the{" "}
             <code>satisfies</code>-operator), and bug fixes.
+          </Link>
+        </TitleLabel>
+      </Section>
+      <Section>
+        <TitleLabel
+          title={
+            <>
+              Demo by
+              <br />
+              Pts.js
+            </>
+          }
+        >
+          <Link href="https://ptsjs.org/" target="_blank">
+            Pts.js is a library for creative coding in JavaScript and powers the
+            playful animation in the hero section of this page. Feel free to
+            remove it if you do not need it. But I highly recommend you to check
+            it out.
           </Link>
         </TitleLabel>
       </Section>
