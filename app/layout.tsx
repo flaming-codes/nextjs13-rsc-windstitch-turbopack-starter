@@ -1,6 +1,5 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import clsx from "clsx";
 import { PropsWithChildren } from "react";
 
 const inter = localFont({
@@ -35,7 +34,7 @@ const inter = localFont({
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" className={clsx(inter.variable)}>
+    <html lang="en" className={inter.variable}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head

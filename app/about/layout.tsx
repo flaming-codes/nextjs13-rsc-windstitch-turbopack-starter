@@ -3,7 +3,8 @@ import { PropsWithChildren } from "react";
 
 type Props = PropsWithChildren<{}>;
 
-const twNav = "h-screen w-[20vw] flex flex-col justify-between bg-polar-night-200 p-8 text-12";
+const twNav =
+  "h-screen w-[20vw] flex flex-col justify-between bg-polar-night-200 p-8 text-12";
 
 export default function AboutLayout(props: Props) {
   const { children } = props;
@@ -27,7 +28,7 @@ export default function AboutLayout(props: Props) {
           </Link>
         </div>
       </nav>
-      <div className="p-2">{children}</div>
+      {children}
     </div>
   );
 }
