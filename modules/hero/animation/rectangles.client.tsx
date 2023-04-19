@@ -2,20 +2,20 @@
 
 import { Line, Rectangle, Util } from "pts";
 import { HandleAnimateFn, PtsCanvas } from "react-pts-canvas";
-import colors from "tailwindcss/colors";
+import { indigo } from "tailwindcss/colors";
 
 const onAnimate: HandleAnimateFn = (space, form, ftime) => {
-  let subs = space.innerBound.map((p) =>
+  const subs = space.innerBound.map((p) =>
     Line.subpoints([p, space.pointer], 30)
   );
-  let rects = Util.zip(subs).map((r, i) =>
+  const rects = Util.zip(subs).map((r, i) =>
     Rectangle.corners(r).rotate2D((i * Math.PI) / 60, space.pointer)
   );
 
-  form.strokeOnly(colors["indigo"][400], 2).polygons(rects);
+  form.strokeOnly(indigo[400], 2).polygons(rects);
 };
 
-export function HeroAnimation() {
+export function RectanglesHeroAnimation() {
   return (
     <PtsCanvas
       background="transparent"

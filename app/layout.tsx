@@ -5,7 +5,7 @@ import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Header } from "@/modules/header/header";
 import { Main } from "@/modules/main/main";
-import { Hero } from "@/modules/header/hero";
+import Link from "next/link";
 
 const inter = localFont({
   variable: "--font-inter",
@@ -38,22 +38,29 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "Welcome to Next.js",
+  title: {
+    default: "Next.js 13 with RSC, Windstitch, and Turbopack",
+    template: "%s | flaming.codes",
+  },
+  description:
+    "A template to get you started with Next.js 13, RSC, Windstitch, and Turbopack.",
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={inter.variable}>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body className="pb-48">
+      <body>
         <Header />
-        <Hero />
         <Main>{children}</Main>
+        <footer className="p-6 pt-60">
+          <small>
+            <span>by </span>
+            <a href="https://flaming.codes" className="font-medium">
+              flaming.codes
+            </a>
+          </small>
+        </footer>
       </body>
     </html>
   );
