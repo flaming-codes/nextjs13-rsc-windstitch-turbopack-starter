@@ -1,3 +1,4 @@
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { Suspense, lazy } from "react";
 import { w } from "windstitch";
@@ -21,6 +22,13 @@ const Base = w.header(`
   h-[40vh] bg-indigo-8
 `);
 
+const LinkHintIcon = w(ArrowTopRightIcon, {
+  className: `
+    absolute bottom-0 right-0 m-2 text-blackA-12
+    transition-color duration-500 ease-in-out
+    `,
+});
+
 type Props = {
   variant: keyof typeof animations;
 };
@@ -33,13 +41,14 @@ export function Hero(props: Props) {
     <Base>
       <Link
         href="https://ptsjs.org/"
-        className="relative block w-full h-full"
+        className="relative block w-full h-full group"
         title="Visit the great ptsjs.org site for more information"
         target="_blank"
       >
         <Suspense fallback={<Skeleton />}>
           <Animation />
         </Suspense>
+        <LinkHintIcon width={32} height={32} />
       </Link>
     </Base>
   );

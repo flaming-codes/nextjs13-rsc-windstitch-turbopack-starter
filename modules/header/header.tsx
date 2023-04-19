@@ -31,8 +31,12 @@ const LinkItem = w(Link, {
 export function Header() {
   return (
     <Base>
-      <TitleLabel title="Next.js / RSC / Windstitch Starter">
-        by <a href="https://flaming.codes">flaming.codes</a>
+      <TitleLabel
+        title={<Link href="/">Next.js / RSC / Windstitch Starter</Link>}
+      >
+        <span className="-ml-1 hidden lg:block">
+          by <a href="https://flaming.codes">flaming.codes</a>
+        </span>
       </TitleLabel>
       <Nav>
         <LinkItem href="/">

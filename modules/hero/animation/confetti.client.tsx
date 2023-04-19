@@ -16,6 +16,18 @@ import {
   HandleStartFn,
   PtsCanvas,
 } from "react-pts-canvas";
+import {
+  red,
+  plum,
+  violet,
+  indigo,
+  sand,
+  teal,
+  pink,
+  blue,
+  cyan,
+  crimson,
+} from "@radix-ui/colors";
 
 // Confetti extends Pt to implement custom logic and rendering.
 class Confetti extends Pt {
@@ -27,7 +39,18 @@ class Confetti extends Pt {
 
   constructor(...args: any) {
     super(...args);
-    this.color = ["#f03", "#09f", "#0c6", "#fff"][Util.randomInt(4)];
+    const colors = [
+      red.red9,
+      plum.plum9,
+      violet.violet9,
+      indigo.indigo9,
+      pink.pink9,
+      teal.teal9,
+      blue.blue9,
+      cyan.cyan9,
+      crimson.crimson9,
+    ];
+    this.color = colors[Util.randomInt(colors.length)];
     this.size = Math.random() * 7 + 2;
     this.accAngle = Math.random() * Const.two_pi;
     this.dir = Math.random() > 0.5 ? 1 : -1;
@@ -92,8 +115,8 @@ export function ConfettiHeroAnimation() {
       }}
     >
       <PtsCanvas
-        background="lightgray"
-        style={{ width: "100%", height: "100%" }}
+        background={sand.sand6}
+        style={{ width: "100%", height: "100%", background: sand.sand6 }}
         onStart={onStart}
         onAnimate={onAnimate}
         onResize={onResize}
