@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Hero } from "@/modules/header/hero";
 import { PropsWithChildren } from "react";
 import { w } from "windstitch";
 
@@ -15,19 +15,22 @@ const Base = w.div(`
 
 const Description = w.section(``);
 
-export default function AboutLayout(props: Props) {
+export default function InteractiveRscLayout(props: Props) {
   const { children } = props;
 
   return (
-    <Base>
-      <Description>
-        <h1 className="text-4xl font-bold">About</h1>
-        <p className="mt-4">
-          This is a demo for an interactive{" "}
-          <strong>React Server Component.</strong>
-        </p>
-      </Description>
-      {children}
-    </Base>
+    <>
+      <Hero variant="growing-points" />
+      <Base>
+        <Description>
+          <h1 className="text-4xl font-bold">About</h1>
+          <p className="mt-4">
+            This is a demo for an interactive{" "}
+            <strong>React Server Component.</strong>
+          </p>
+        </Description>
+        {children}
+      </Base>
+    </>
   );
 }

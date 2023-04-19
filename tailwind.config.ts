@@ -22,8 +22,6 @@ export default {
     // Reset default colors w/ custom ones & inherit the plugin's colors.
     colors: {
       transparent: "transparent",
-      black: "#000000",
-      white: "#FFFFFF",
     },
     fontFamily: {
       sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
