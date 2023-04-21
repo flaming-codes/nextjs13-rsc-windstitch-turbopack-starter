@@ -1,0 +1,15 @@
+{
+  "$schema": "https://codesandbox.io/schemas/tasks.json",
+  "setupTasks": ["npm i"],
+  "tasks": {
+    "install-dependencies": {
+      "name": "Install Dependencies",
+      "command": "npm i"
+    },
+    "start-app": {
+      "name": "Run Dev Server",
+      "command": "npm run dev",
+      "runAtStart": true
+    }
+  }
+}

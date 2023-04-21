@@ -16,6 +16,10 @@ const animations = {
     default: (await import("../hero/animation/confetti.client"))
       .ConfettiHeroAnimation,
   })),
+  spinning: lazy(async () => ({
+    default: (await import("../hero/animation/spinning.client"))
+      .SpinningHeroAnimation,
+  })),
 } as const;
 
 const Base = w.header(`

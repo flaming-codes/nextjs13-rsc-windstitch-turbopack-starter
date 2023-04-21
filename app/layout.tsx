@@ -5,7 +5,6 @@ import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Header } from "@/modules/header/header";
 import { Main } from "@/modules/main/main";
-import Link from "next/link";
 
 const inter = localFont({
   variable: "--font-inter",

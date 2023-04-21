@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { W, w } from "windstitch";
+import { w } from "windstitch";
 import { TitleLabel } from "../ui/title-label";
 import {
   HomeIcon,
