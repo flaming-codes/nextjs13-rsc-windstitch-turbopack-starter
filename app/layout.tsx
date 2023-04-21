@@ -46,6 +46,11 @@ export const metadata: Metadata = {
     "A template to get you started with Next.js 13, RSC, Windstitch, and Turbopack.",
 };
 
+// By default, every page will be revalidated after one 1 hour.
+// Next 13 also suppports revalidation thresholds per fetch on RSC.
+// @see https://beta.nextjs.org/docs/data-fetching/caching
+export const revalidate = 60 * 60;
+
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={inter.variable}>

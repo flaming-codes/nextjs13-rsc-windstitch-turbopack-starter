@@ -8,10 +8,10 @@
 
 @layer base {
   html {
-    @apply font-sans;
+    @apply font-sans bg-gray-1;
   }
 
   body {
-    @apply bg-gray-1 text-gray-12
+    @apply bg-gray-1 text-gray-12;
   }
 }

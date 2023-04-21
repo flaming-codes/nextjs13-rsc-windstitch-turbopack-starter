@@ -94,6 +94,25 @@ export default function Home() {
           <TitleLabel
             title={
               <>
+                Radix UI
+                <br />
+                Colors
+              </>
+            }
+          >
+            <Link href="https://github.com/brattonross/windy-radix-palette">
+              The color palette designed by Radix UI is a great selection to use
+              in your project. Radix made sure they are accessible when combined
+              and also has a guide what colors to use together. To integrate
+              Radix UI Colors with Tailwind, I added{" "}
+              <code>windy-radix-palette</code> to this template.
+            </Link>
+          </TitleLabel>
+        </section>
+        <section>
+          <TitleLabel
+            title={
+              <>
                 Windstitch
                 <br />& VS Code
               </>
