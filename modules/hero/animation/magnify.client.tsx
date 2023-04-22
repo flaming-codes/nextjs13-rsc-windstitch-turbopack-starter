@@ -20,6 +20,7 @@ function seedPoints(space: CanvasSpace) {
 export function MagnifyHeroAnimation() {
   const ptsRef = useRef<Group>(new Group());
   const colorsRef = useRef<string[]>([]);
+  const isHoverRef = useRef(false);
 
   const onStart = useCallback<HandleStartFn>((bound, space) => {
     ptsRef.current = seedPoints(space);
@@ -33,8 +34,9 @@ export function MagnifyHeroAnimation() {
     ptsRef.current = seedPoints(space);
   }, []);
 
-  const onAnimate = useCallback<HandleAnimateFn>((space, form, time, ftime) => {
+  const onAnimate = useCallback<HandleAnimateFn>((space, form, time) => {
     const colors = colorsRef.current;
+    const center = isHoverRef.current ? space.pointer : space.center;
 
     const duration = 8_000;
     const rawFactor = Num.cycle((time % duration) / duration) - 0.5;
@@ -42,13 +44,21 @@ export function MagnifyHeroAnimation() {
 
     ptsRef.current.forEach((pt, i) => {
       const dot = colors[i % colors.length];
-      const mag = Line.magnitude(new Group(space.pointer, pt)) * 0.7;
+      const mag = Line.magnitude(new Group(center, pt)) * 0.7;
       form.fillOnly(dot).point(pt, mag * factor, "circle");
     });
   }, []);
 
   return (
-    <div className="bg-blue-6 absolute inset-0">
+    <div
+      className="bg-blue-8 absolute inset-0"
+      onMouseEnter={() => {
+        isHoverRef.current = true;
+      }}
+      onMouseLeave={() => {
+        isHoverRef.current = false;
+      }}
+    >
       <PtsCanvas
         background="transparent"
         style={{ width: "100%", height: "100%" }}

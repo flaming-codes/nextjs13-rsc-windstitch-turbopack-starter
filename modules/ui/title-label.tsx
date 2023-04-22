@@ -1,7 +1,7 @@
 import { PropsWithChildren, ReactNode } from "react";
 import { w } from "windstitch";
 
-const Title = w.h2("font-bold shrink-0 text-right");
+const Title = w.h2("font-bold shrink-0 md:text-right");
 
 type Props = PropsWithChildren<{
   title: ReactNode;

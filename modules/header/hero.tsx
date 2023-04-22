@@ -16,9 +16,13 @@ const animations = {
     default: (await import("../hero/animation/confetti.client"))
       .ConfettiHeroAnimation,
   })),
-  spinning: lazy(async () => ({
-    default: (await import("../hero/animation/spinning.client"))
-      .SpinningHeroAnimation,
+  magnify: lazy(async () => ({
+    default: (await import("../hero/animation/magnify.client"))
+      .MagnifyHeroAnimation,
+  })),
+  shear: lazy(async () => ({
+    default: (await import("../hero/animation/shear.client"))
+      .ShearHeroAnimation,
   })),
 } as const;
 
