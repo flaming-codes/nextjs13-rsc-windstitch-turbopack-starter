@@ -8,6 +8,7 @@ Template to get you started with Next.js 13, RSC (React Server Components), Wind
 - 🔄 Revalidation of React components in RSC with revalidate property
 - 🎨 Windstitch for Tailwind CSS in React with styled-like API and polymorphic components
 - 💻 Custom VS Code settings for improved DX with Windstitch
+- 👩‍🎨 Radix UI Colors w/ support for dark/light mode
 - ⚡️ Turbopack for extremely fast builds
 - 🔢 TypeScript 5 for performance improvements and new features
 - 🎉 Playful animation powered by Pts.js library (optional)
@@ -31,6 +32,11 @@ Windstitch is a library that allows you to use Tailwind classes in your React co
 ### Windstitch & VS Code
 
 To improve the DX of Windstitch, this template also includes a custom VS Code settings.json file. This extension allows you to use Tailwind classes in your CSS-in-JS files and provides autocompletion for them. It is not perfect yet, but it is still a great improvement over the default experience.
+
+### Radix UI Colors
+
+Radix UI only provides a set of accessible React-components, but also an open-source color system for designing beautiful, accessible websites and apps. This template uses a Tailwind-plugin to automatically expose those colors w/ support for dark/light mode.
+
 
 ### Turbopack
 

@@ -16,6 +16,14 @@ const animations = {
     default: (await import("../hero/animation/confetti.client"))
       .ConfettiHeroAnimation,
   })),
+  magnify: lazy(async () => ({
+    default: (await import("../hero/animation/magnify.client"))
+      .MagnifyHeroAnimation,
+  })),
+  shear: lazy(async () => ({
+    default: (await import("../hero/animation/shear.client"))
+      .ShearHeroAnimation,
+  })),
 } as const;
 
 const Base = w.header(`

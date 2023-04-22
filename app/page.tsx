@@ -13,7 +13,7 @@ const Base = w.div(`
 export default function Home() {
   return (
     <>
-      <Hero variant="rectangles" />
+      <Hero variant="magnify" />
       <Base>
         <section className="col-span-full">
           <TitleLabel title="Features">of this template</TitleLabel>
@@ -87,6 +87,25 @@ export default function Home() {
               library like Emotion or Styled Components and{" "}
               <strong>is compatible with RSC</strong>. Windstitch has a
               styled-like API and supports polymorphic components.
+            </Link>
+          </TitleLabel>
+        </section>
+        <section>
+          <TitleLabel
+            title={
+              <>
+                Radix UI
+                <br />
+                Colors
+              </>
+            }
+          >
+            <Link href="https://github.com/brattonross/windy-radix-palette">
+              The color palette designed by Radix UI is a great selection to use
+              in your project. Radix made sure they are accessible when combined
+              and also has a guide what colors to use together. To integrate
+              Radix UI Colors with Tailwind, I added{" "}
+              <code>windy-radix-palette</code> to this template.
             </Link>
           </TitleLabel>
         </section>

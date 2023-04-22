@@ -5,7 +5,6 @@ import { PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { Header } from "@/modules/header/header";
 import { Main } from "@/modules/main/main";
-import Link from "next/link";
 
 const inter = localFont({
   variable: "--font-inter",
@@ -45,6 +44,11 @@ export const metadata: Metadata = {
   description:
     "A template to get you started with Next.js 13, RSC, Windstitch, and Turbopack.",
 };
+
+// By default, every page will be revalidated after one 1 hour.
+// Next 13 also suppports revalidation thresholds per fetch on RSC.
+// @see https://beta.nextjs.org/docs/data-fetching/caching
+export const revalidate = 60 * 60;
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
