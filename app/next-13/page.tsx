@@ -25,7 +25,15 @@ export default function Next13Page() {
       </TitleSection>
 
       <section className="xl:col-span-2 2xl:col-span-1">
-        <TitleSection title="Server Components">
+        <TitleSection
+          title={
+            <span>
+              Server
+              <br />
+              Components
+            </span>
+          }
+        >
           <p>
             React Server Components are a new way to build applications that
             leverage the power of server-side rendering, without losing the
