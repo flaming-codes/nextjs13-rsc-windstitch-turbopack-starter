@@ -4,7 +4,10 @@
   "tasks": {
     "install-dependencies": {
       "name": "Install Dependencies",
-      "command": "npm i"
+      "command": "npm i",
+      "restartOn": {
+        "files": ["package-lock.json"]
+      }
     },
     "start-app": {
       "name": "Run Dev Server",

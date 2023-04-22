@@ -13,7 +13,7 @@ const Base = w.div(`
 export default function Home() {
   return (
     <>
-      <Hero variant="spinning" />
+      <Hero variant="magnify" />
       <Base>
         <section className="col-span-full">
           <TitleLabel title="Features">of this template</TitleLabel>
