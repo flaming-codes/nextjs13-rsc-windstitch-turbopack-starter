@@ -8,8 +8,8 @@ import {
 } from "@radix-ui/react-icons";
 
 const Base = w.header(`
-  flex flex-col justify-between gap-4 p-6
-  text-14
+  sticky z-10 top-0 flex flex-col justify-between gap-4 p-6
+  text-14 bg-gray-1 border-b border-gray-2
 
   md:flex-row md:items-stretch
 `);
