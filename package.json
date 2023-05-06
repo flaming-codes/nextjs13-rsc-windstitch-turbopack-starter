@@ -37,7 +37,7 @@
     "storybook": "7.0.6",
     "tailwindcss": "3.3.1",
     "windstitch": "0.3.0",
-    "windy-radix-palette": "0.6.0",
+    "windy-radix-palette": "0.6.1",
     "windy-radix-typography": "0.2.1"
   }
 }
