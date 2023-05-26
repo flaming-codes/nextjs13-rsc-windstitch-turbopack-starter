@@ -35,7 +35,7 @@
     "eslint-plugin-storybook": "0.6.11",
     "postcss": "8.4.21",
     "storybook": "7.0.6",
-    "tailwindcss": "3.3.1",
+    "tailwindcss": "3.3.2",
     "windstitch": "0.3.0",
     "windy-radix-palette": "0.6.1",
     "windy-radix-typography": "0.2.1"
